@@ -1,0 +1,117 @@
+*{
+	margin:0; padding: 0;box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+main{
+	width: 100%;
+	height:85vh;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	text-align: center;
+	color: white;
+}
+section h3{
+	font-size: 35px;
+	font-weight: 200;
+	letter-spacing: 3px;
+	text-shadow: 1px 1px 2px black;
+}
+section h1{
+	margin: 30px 0 20px 0;
+	font-size: 55px;
+	font-weight: 700;
+	text-shadow: 2px 1px 5px black;
+	text-transform: uppercase;
+}
+section p{
+	font-size: 25px;
+	color: #eee;
+	word-spacing: 2px;
+	margin-bottom: 25px;
+	text-shadow: 1px 1px 1px black;
+}
+section a{
+	padding: 12px 30px;
+	border-radius: 4px;
+	outline: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 500;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: white;
+	text-decoration-color: white;
+}
+section .btnone{
+	background: #fff;
+	color:#000;
+}
+section .btntwo{
+	background: #00b894;
+	color: white;
+}
+.change_content:after{
+	content:'';
+	animation:changetext 10s infinite linear;
+	color: #00b894;
+}
+@keyframes changetext{
+	0%{content: "clothes";}
+	20% {content: "shoes" ;}
+}
+
+.background{
+
+}
+.navlogo{
+	margin-bottom: 150px;
+	color: #2a3132;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    background-color: #1d8f7b;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 160px;
+    font-size: 28px; 
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .footer {
+    padding-left: 140px;
+    margin-top: 0px;
+    background-color:  #232f3e;
+    color: whitesmoke;
+	margin-left: -11px;
+	margin-right: -10px;
+    padding: 5%;
+    display: flex;
+  }

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../style/menStyle.css">
+	<style type="text/css">
+      .item{
+      	background: #edcad8;
+      }
+	</style>
+	<title>WOMEN</title>
+	<!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+    <script src="../js/app2.js"></script>
+    <script src="../js/app1.js"></script>
+</head>
+<body>
+	<div class="grid">
+		<header class="header" style="background :#db3276">
+
+			<nav>
+	          <div class="hamburger">
+	            <div class="line"></div>
+	            <div class="line"></div>
+	            <div class="line"></div>
+	          </div>
+	          <div class="banner">
+	            <h1 class="logo"><a  href="../index.html">Grace</a></h1>
+	            <div id="para1"></div>
+	          </div>
+
+	          <ul class="nav-links">
+				<li><a href="../index.html">Home</a></li>
+				<li> <a href="about.html">About</a></li>
+	            <li><a href="men.html">Men</a></li>
+	            <li> <a href="shoes.html">Shoes</a> </li>
+	            <li><a href="wallets.html">Wallets & Bags</a></li>
+	           <li> <a href="login.html">Login</a></li>
+	            <li> <a href="register.html">Register</a></li>
+
+
+
+	          </ul>
+	        </nav>
+
+		</header>
+
+		<section class="Sidebar">
+			<div class="sizeBox">
+				<label class="container">XS
+					<input type="checkbox" checked="checked">
+					<span class="checkmark"></span>
+				</label>
+
+				<label class="container">S
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+
+				<label class="container">M
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+
+				<label class="container">L
+				  	<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>
+
+				<label class="container">XL
+				  	<input type="checkbox">
+					<span class="checkmark"></span>
+				</label> 
+			</div>
+			
+		</section>
+		
+		<main class="main">
+			<div class="item item1">
+	          <img src="../img/women1.png" alt="img 1">
+	          <h3>Indian Dress</h3>
+	          <h4>$110</h4>
+	          <button type="button" name="buy" >BUY NOW</button>
+	        </div>
+
+	        <div class="item item2">
+	          <img src="../img/women2.png" alt="img 3">
+	          <h3>Stylish Dress</h3>
+	          <h4>$80</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+
+	        <div class="item item3">
+	          <img src="../img/women3.png" alt="img 3">
+	          <h3>Zara s' Dress</h3>
+	          <h4>$67</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+
+	        <div class="item item4">
+	          <img src="../img/women4.png" alt="img 4">
+	          <h3>Guess' Dress</h3>
+	          <h4>$78</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+
+	        <div class="item item5">
+	          <img src="../img/women5.png" alt="img 5">
+	          <h3>Fullsleave Dress</h3>
+	          <h4>$99</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+
+	        <div class="item item6">
+	          <img src="../img/women6.png" alt="img 6">
+	          <h3>Baby Dress</h3>
+	          <h4>$45</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+
+	        <div class="item item7">
+	          <img src="../img/women7.png" alt="img 7">
+	          <h3>Formal Attire</h3>
+	          <h4>$59</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+
+	        <div class="item item8">
+	          <img src="../img/women8.png" alt="img 8">
+	          <h3>Baby Frock</h3>
+	          <h4>$61</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+
+	        <div class="item item9">
+	          <img src="../img/women9.png" alt="img 8">
+	          <h3>Maroon Style</h3>
+	          <h4>$56</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+
+	        <div class="item item10">
+	          <img src="../img/women10.png" alt="img 8">
+	          <h3>TraditionaL Wear</h3>
+	          <h4>$95</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+			
+			<div class="item item11">
+	          <img src="../img/women11.png" alt="img 8">
+	          <h3>Baby Red Dress</h3>
+	          <h4>$56</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+
+	        <div class="item item12">
+	          <img src="../img/women12.png" alt="img 8">
+	          <h3>Baby Frock</h3>
+	          <h4>$78</h4>
+	          <button type="button" name="buy">BUY NOW</button>
+	        </div>
+		</main>
+
+		<footer class="footer">
+			<ul>
+	          <li>Contact: +1 9999-888-777</li>
+	          <li>Grace, All rights reserved</li>
+	        </ul>
+	        <ul class="social">
+	        	<li><a href="http://www.facebook.com"><img src="../img/facebook.png" /></a></li>
+	        	<li><a href="http://www.gmail.com"><img src="../img/gmail.png" /></a></li>
+	        	<li><a href="http://www.instagram.com"><img src="../img/insta.png" /></a></li>
+	        </ul>
+		</footer>
+	</div>
+
+	<script src="../js/app.js"></script>
+</body>
+</html>

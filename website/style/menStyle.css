@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada:700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+*{
+	margin: 0px;
+  padding: 0px;
+	box-sizing: border-box;
+}
+
+.grid{
+	display: grid;
+	height: 97vh;
+	grid-template-rows: 80px auto 80px;
+	grid-template-columns: 100px 1fr;
+	grid-template-areas: "header header"
+						"sidebar main"
+						"footer footer";
+}
+
+.header{
+	grid-area: header;
+	background: #8d18d6;
+}
+
+.sidebar{
+	grid-area: sidebar;
+  background: #1f6ae0;
+}
+
+.main{
+	grid-area: main;
+}
+
+.footer{
+	grid-area: footer;
+	background: #8d18d6;
+}
+
+
+/*** sidebar ***/
+.sizeBox{
+	display: flex;
+  	list-style: none;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+ul{
+	list-style: none;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #8d18d6;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+  
+
+/* main */
+.main{
+	display: grid;
+	grid-gap: 5px;
+	grid-template-rows: repeat(auto-fill, minmax(350px,1fr););
+	grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+	justify-content: center;
+	align-items: center;
+}
+
+.item{
+	text-align: center;
+	background-color: #d5e2f2;
+	opacity:
+}
+img {
+	max-width:230px;
+	height: 230px;
+}
+
+button {
+  margin-bottom: 10px;
+	background-color:#8d18d6;
+  border-radius:28px;
+  border:1px solid #7d20b0;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #81369e;
+}
+
+button:hover {
+	background: #8a23c2;
+}
+
+.item{
+   font-family:Arial;
+}
+
+@media only screen and (max-width: 550px) {
+	.grid{
+		display: grid;
+		height: 97vh;
+		grid-template-rows: 80px 20px auto auto;
+		grid-template-columns: 1fr;
+		grid-template-areas: "header"
+							"sidebar"
+							"main"
+							"footer";
+	}
+
+	.sizeBox{
+		border: 1px solid;
+		display: none;
+		height: 20px;
+		direction: row;
+		justify-content: flex-start;
+	}
+  .logo{
+    text-align: center;
+  }
+
+}
+
+
+
+/*** header ***/
+.logo{
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+  margin-right: auto;
+}
+.logo a{
+  text-decoration: none;
+  color: white;
+}
+.banner{
+  margin:10px 0px 0px 10px;
+}
+
+#para1{
+  color: white;
+}
+
+nav {
+  height: 10vh;
+  display: flex;
+  justify-content:space-around;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links li a{
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.nav-links li a:hover {
+  text-decoration: underline;
+  font-size: 18px;
+}
+@media screen and (max-width: 550px) {
+
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .nav-links {
+    justify-content: space-around;
+    position: fixed;
+    background: #5b78c7;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 1s;
+  }
+  .nav-links li:nth-child(6) {
+    transition: all 0.5s ease 1.2s;
+  }
+  .nav-links li:nth-child(7) {
+    transition: all 0.5s ease 1.4s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+
+  .footer ul li{
+    font-size: 12px;
+  }
+
+  .footer ul li a{
+   font-size: 12px;
+  }
+}
+
+/* footer */
+.footer {
+  display: flex;
+  margin-right: 10px;
+  justify-content: space-around;
+}
+.footer ul li{
+  color: white;
+  font-size: 20px;
+}
+
+.footer ul li a{
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+} 
+
+.footer ul li a:hover{
+  color: red;
+  transition: ease 0.3s;
+}
+.social li {
+  margin-top: 7px;
+  display:inline-block;
+  list-style-type:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  }
+.social li a {
+  border-bottom: none;
+  }
+.social li img {
+  width:50px;
+  height:50px;
+  margin-right: 5px;
+}
